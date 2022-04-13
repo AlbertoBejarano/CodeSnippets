@@ -9,5 +9,5 @@ conda install -c bioconda os
 df = pd.read_csv('file.tar.gz', compression='gzip', header=0, sep='\t', quotechar='"', error_bad_lines=False)
 
 
-
+pd.read_csv(file, low_memory=False,usecols=lambda c: not c.startswith('Unnamed:'))
 
