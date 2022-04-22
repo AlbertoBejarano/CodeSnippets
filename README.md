@@ -15,3 +15,10 @@ usecols=lambda c: not c.startswith('Unnamed:')
 df['Condition'] == "After food"
 
 plt.scatter(outputs[:,0], outputs[:,1], s=1, c=y_train, cmap='rainbow')
+
+
+
+
+#!pip uninstall umap
+#!pip install umap-learn
+import umap.umap_ as umap
