@@ -18,6 +18,17 @@ plt.scatter(outputs[:,0], outputs[:,1], s=1, c=y_train, cmap='rainbow')
 
 
 
+plt.subplots(figsize=(25, 50))
+count = 1
+for i in range(len(num_data.columns)-1):
+    plt.subplot(14, 4, count)
+    sns.scatterplot(x=num_data.columns[i], y=num_data.columns[i+1],
+                        data=num_data, color='red')
+    count += 1
+plt.show()
+
+
+
 
 #!pip uninstall umap
 #!pip install umap-learn
