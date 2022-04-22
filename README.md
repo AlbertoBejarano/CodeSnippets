@@ -28,3 +28,12 @@ import umap.umap_ as umap
 !pip install umap-learn[plot]
 !pip holoviews==1.12.7
 !pip install -U ipykernel
+
+!git clone https://github.com/lmcinnes/umap
+!cd umap
+!pip install --user -r requirements.txt
+!python setup.py install --user
+
+!pip install 'umap-learn==0.3.10'
+
+
