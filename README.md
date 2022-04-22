@@ -29,6 +29,8 @@ plt.show()
 
 
 
+df.describe(include='object')
+
 
 #!pip uninstall umap
 #!pip install umap-learn
