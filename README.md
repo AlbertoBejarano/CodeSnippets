@@ -22,3 +22,9 @@ plt.scatter(outputs[:,0], outputs[:,1], s=1, c=y_train, cmap='rainbow')
 #!pip uninstall umap
 #!pip install umap-learn
 import umap.umap_ as umap
+
+
+
+!pip install umap-learn[plot]
+!pip install holoviews
+!pip install -U ipykernel
