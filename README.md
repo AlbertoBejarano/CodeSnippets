@@ -29,6 +29,27 @@ plt.show()
 
 
 
+
+ncols=5
+length = corr_df.shape[1]
+nrows=length//ncols if length%ncols==0 else length//ncols+1
+
+fig, ax = plt.subplots(nrows=nrows, ncols = ncols, figsize = (22, 12))
+
+for idx, col in enumerate(corr_df):  
+    i=idx//ncols
+    j=idx%ncols
+    sns.regplot(x = 'price', y = col, data = corr_df, ax = ax[i][j])
+
+plt.tight_layout()
+
+
+
+
+
+
+
+
 df.describe(include='object')
 
 
