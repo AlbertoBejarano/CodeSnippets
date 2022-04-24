@@ -16,6 +16,10 @@ df['Condition'] == "After food"
 
 plt.scatter(outputs[:,0], outputs[:,1], s=1, c=y_train, cmap='rainbow')
 
+data = df.corr()
+sns.heatmap(data.corr(), annot=True)
+plt.tight_layout()
+plt.show()
 
 
 plt.subplots(figsize=(25, 50))
@@ -43,15 +47,7 @@ for idx, col in enumerate(corr_df):
 
 plt.tight_layout()
 
-
-
-
-
-
-
-
 df.describe(include='object')
-
 
 #!pip uninstall umap
 #!pip install umap-learn
@@ -69,5 +65,4 @@ import umap.umap_ as umap
 !python setup.py install --user
 
 !pip install 'umap-learn==0.3.10'
-
 
