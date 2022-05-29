@@ -1,0 +1,29 @@
+df.head()
+df.tail()
+df.sample()
+df.shape()
+df.memory_usage()
+df.types()
+df.isna()	df.isna.sum()	df.dropna() df.fillna(n) df.replace(np.nan,'0',inplace = True)
+df.isnull()	df.isnull.sum()	df.isnull().sum().sort_values(ascending = False)
+df.nunique(axis=0)
+df.nunique(axis=1)
+df.duplicated()
+df.value_counts("column")
+df.describe()
+df.info()
+df.nsmallest(n,"column")
+df.nlargest(n,"column")
+table = df.groupby("column"); table.first()
+df.corr()
+df.memory_usage()	 df.memory_usage(index=True).sum()
+
+
+
+ 
+df[df['column'] == 1].head()	#Filter data
+
+The interquartile range (IQR) 
+Q1 = df.quantile(0.25); Q3 = df.quantile(0.75); IQR = Q3 - Q1; print(IQR)
+
+duplicate_rows_df = df[df.duplicated()]; print("number of duplicate rows: ", duplicate_rows_df.shape)
